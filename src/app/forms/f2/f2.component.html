@@ -1,1 +1,24 @@
 <p>f2 works!</p>
+
+<form [formGroup]="myPersonForm" (ngSubmit)="onShukiSubmit()">
+  
+    <label>
+      Name:
+      <input type="text" formControlName="name">
+    </label>
+  
+    <label>
+      age:
+      <input  formControlName="age">
+    </label>
+    <br><br>
+  
+    <button type="submit" [disabled]="!myPersonForm.valid">Submit</button>
+</form>
+
+<br><br>
+<button (click)="logthenamer()">log</button>
+<br><br><br>
+<ul>
+    <li *ngFor="let x of arr">{{x.name}} - {{x.age}}</li>
+</ul>

@@ -34,4 +34,11 @@ export class F1Component implements OnInit {
     });
 
   }
+
+
+  updateName() {
+    this.name.setValue('Shuki!!!');
+  }
+
+
 }
